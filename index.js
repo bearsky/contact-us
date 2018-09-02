@@ -15,7 +15,7 @@ app.set('view engine', '.hbs');
 app.use(express.static('./public'));
 
 // start controllers
-formController(app);
+formController(app, urlencodedParser);
 
 // homepage route
 app.get('/', function (req, res) { // TODO: add homepage
