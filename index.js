@@ -23,5 +23,11 @@ app.get('/', function (req, res) { // TODO: add homepage
     res.render('index');
 });
 
+// handle 404
+app.use(function(req, res, next){
+  res.status(404);
+  res.render('error');
+});
+
 app.listen(config.PORT);
 console.log("App is running at : " + config.PORT);
