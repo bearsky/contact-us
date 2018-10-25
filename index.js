@@ -23,6 +23,10 @@ app.get('/', function (req, res) { // TODO: add homepage
     res.render('index');
 });
 
+app.get('/gaapi', function (req, res) {
+    res.render('GAapi');
+});
+
 // handle 404
 app.use(function(req, res, next){
   res.status(404);
