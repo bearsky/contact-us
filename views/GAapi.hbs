@@ -38,7 +38,7 @@
             ],
             metrics: [
               {
-                expression: 'ga:sessions'
+                expression: 'ga:uniquePageviews'
               }
             ]
           }
@@ -46,6 +46,8 @@
       }
     }).then(displayResults, console.error.bind(console));
   }
+
+  // https://www.googleapis.com/analytics/v3/data/ga?ids=ga%3A183865858&start-date=30daysAgo&end-date=yesterday&metrics=ga%3AuniquePageviews
 
   function displayResults(response) {
     var formattedJson = JSON.stringify(response.result, null, 2);
