@@ -41,7 +41,11 @@
                 expression: 'ga:uniquePageviews'
               }
             ],
-            dimensions: 'ga:pagePath'
+            dimensions: [
+              {
+                expression: 'ga:pagePath'
+              }
+            ]
           }
         ]
       }
